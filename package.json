@@ -2,9 +2,11 @@
   "name": "daily-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
     "mustache-express": "^1.2.5"
   },
   "devDependencies": {},
