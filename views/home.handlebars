@@ -8,7 +8,9 @@
 </head>
 
 <body>
-  <h1>Todo List</h1>
+  <header>
+    <h1>Todo List</h1>
+  </header>
 
   <section id="addTodo">
     <form action="/" method="post">
@@ -16,28 +18,29 @@
       <button type="submit" name="submit">Add to List</button>
     </form>
   </section>
+
   <section id="todos">
     <form action="/completed" method="post">
       <ul>
         {{#todos}}
           <li>
-            <input type="checkbox" name="completed" value="{{.}}">
+            <input class="todoItem" type="checkbox" name="completed" value="{{.}}">
             <label type="text">{{.}}</label>
           </li>
         {{/todos}}
       </ul>
       {{#if todos}}
-        <button type="submit" name="completed">Mark Complete</button>
+        <button class="submit" type="submit" name="completed">Mark Complete</button>
       {{/if}}
     </form>
-
   </section>
+
   <section id="completed">
     {{#if completed}}
       <h2>Completed Tasks</h2>
       <ul>
         {{#completed}}
-          <li>{{.}}</li>
+          <li class="completedItem">{{.}}</li>
         {{/completed}}
       </ul>
     {{/if}}
